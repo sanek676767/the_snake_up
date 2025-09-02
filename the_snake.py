@@ -57,7 +57,6 @@ class GameObject:
     def draw(self):
         """Абстрактный метод для отрисовки объекта."""
         raise NotImplementedError(
-            "Метод draw должен быть переопределен в дочернем классе"
         )
 
     def draw_cell(self, position=None):
@@ -93,8 +92,8 @@ class Apple(GameObject):
             )
 
             # Если нет занятых позиций или позиция свободна, выходим из цикла
-            if (not occupied_positions or
-                    self.position not in occupied_positions):
+            if (not occupied_positions
+                    or self.position not in occupied_positions):
                 break
 
     def draw(self):
